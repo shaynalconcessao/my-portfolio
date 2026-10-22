@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Shayna | Art Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div class="stars"></div>
+
+
+    <!-- NAVIGATION -->
+
+    <header class="gallery-header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Shayna ✦
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#projects">
+                    Projects
+                </a>
+
+                <a href="gallery.html" class="active">
+                    Art Gallery
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- GALLERY INTRO -->
+
+    <main>
+
+        <section class="gallery-intro">
+
+            <p class="section-label">
+                MY CREATIVE UNIVERSE
+            </p>
+
+            <h1>
+                The <span>Art Gallery</span> ✦
+            </h1>
+
+            <p>
+                A collection of drawings, paintings, sketches,
+                and creative experiments I've made over the years.
+            </p>
+
+        </section>
+
+
+        <!-- FILTERS -->
+
+        <div class="filter-buttons">
+
+            <button
+                class="filter-btn active"
+                onclick="filterGallery('all', this)">
+                All Works
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterGallery('drawing', this)">
+                Drawings & Sketches
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterGallery('acrylic', this)">
+                Acrylic Paintings
+            </button>
+
+            <button
+                class="filter-btn"
+                onclick="filterGallery('watercolor', this)">
+                Watercolor
+            </button>
+
+        </div>
+
+
+        <!-- ARTWORKS -->
+
+        <div
+            id="art-grid"
+            class="art-grid">
+        </div>
+
+    </main>
+
+
+    <!-- LIGHTBOX -->
+
+    <div
+        id="lightbox"
+        class="lightbox"
+        onclick="closeLightbox(event)">
+
+        <div
+            class="lightbox-content"
+            onclick="event.stopPropagation()">
+
+            <button
+                class="close-btn"
+                onclick="closeLightbox()">
+                ×
+            </button>
+
+
+            <div class="lightbox-layout">
+
+                <div class="lightbox-left">
+
+                    <img
+                        id="lightbox-img"
+                        src=""
+                        alt="Artwork">
+
+                </div>
+
+
+                <div class="lightbox-right">
+
+                    <p class="lightbox-category">
+                        ARTWORK
+                    </p>
+
+                    <h2 id="lightbox-title"></h2>
+
+                    <p id="lightbox-desc"></p>
+
+
+                    <button
+                        id="like-btn"
+                        onclick="toggleLike()">
+
+                        ♡
+                        <span id="like-count">0</span>
+
+                    </button>
+
+
+                    <div class="comments-section">
+
+                        <h3>
+                            Thoughts ✦
+                        </h3>
+
+                        <div
+                            id="comments-list">
+                        </div>
+
+
+                        <div class="comment-input-area">
+
+                            <input
+                                type="text"
+                                id="comment-input"
+                                placeholder="Leave a comment...">
+
+                            <button
+                                onclick="addComment()">
+                                Post
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            ✦ Shayna's Art Universe • 2026 ✦
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
